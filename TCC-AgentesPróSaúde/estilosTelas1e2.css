@@ -1,0 +1,62 @@
+body{
+    /*outro background*/
+    /*background-image: linear-gradient(to right, rgb(172, 213, 252), rgb(81, 197, 243), rgb(85, 177, 214) , rgb(151, 222, 243));*/
+    background-repeat: no-repeat;
+    background-image: url(imgTCC/imgFundo.jpg);
+    background-size: 100%;
+    margin: 0;
+}
+
+.containerLogin{
+    position: static;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 450px;
+    margin-top: 4.5%;
+    margin-left: 12%;
+    border-radius: 15px;
+}
+
+.containerCadastro{
+    position: static;
+    background-color: rgb(255, 255, 255);
+    height: 680px;
+    width: 450px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    margin-left: 12%;
+    border-radius: 15px;
+}
+
+div h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 35px;
+    color: rgb(41, 126, 238);
+    padding-top: 15px;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    border-style: solid;
+}
+
+.botao{
+    background-color: rgb(41, 126, 238);
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-color: rgb(59, 92, 136);
+}
+
+.botao:hover{
+    background-color: rgb(16, 89, 184);
+}
+

@@ -1,0 +1,59 @@
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  background: #fefefe;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+  color: #5b97db;
+}
+
+table thead{
+  background:#1976d2;
+  border-bottom: none;
+  color: #fff;
+}
+
+table tr {
+  padding: .35em;
+}
+
+table tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+table tbody tr:hover {
+  background: #d9e3e8;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.botao{
+  margin: 0 10px;
+  background-color: rgb(41, 126, 238);
+  color: white;
+  padding: 0 25px;
+  border-color: rgb(59, 92, 136);
+}
+
+.editarExcluir{
+  color: rgb(41, 126, 238);
+}
+
+.editarExcluir :hover{
+  color: rgb(16, 89, 184);
+}

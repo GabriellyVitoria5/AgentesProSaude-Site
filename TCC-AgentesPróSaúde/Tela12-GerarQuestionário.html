@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentesPróSaúde - Gerar Questionário</title>
+    <link rel="stylesheet" href="estilosPaginaInicial.css">
+
+</head>
+
+<style>
+
+    .botaoQuestionario{
+        margin-top: 20px;
+        font-size: 20px;
+        background-color: rgb(41, 126, 238);
+        color: white;
+        padding: 0 25px;
+        border-color: rgb(70, 113, 168);
+        border-radius: 15px;
+    }
+
+
+</style>
+
+<body>
+
+    <header>
+        <h1>AgentesPróSaúde</h1>
+    </header>
+
+    <h3 class="barra"></h3>
+
+    <div>
+
+        <section>
+
+            <article class="alinharCard">
+
+                <div class="menu">
+
+                    <h3>Perfil</h3>
+                    <ul id="menu">
+                        <li><a href="Tela4-PerfilAgente.html">&#10148; Visualizar</a></li>
+                    </ul>
+
+                    <h3>Residências</h3>
+                    <ul id="menu">
+                        <li><a href="Tela6-CadastrarResidencia.php">&#10148; Cadastrar</a></li>
+                        <li><a href="Tela7-PesquisarResidencia.html">&#10148; Pesquisar</a></li>
+                    </ul>
+
+                    <h3>Moradores</h3>
+                    <ul id="menu">
+                        <li><a href="Tela9-CadastrarMorador.php">&#10148; Cadastrar</a></li>
+                        <li><a href="Tela10-PesquisarMorador.html">&#10148; Pesquisar</a></li>
+                    </ul>
+
+                    <h3>Questionário</h3>
+                    <ul id="menu">
+                        <li><a href="Tela12-Gerar Questionario.html">&#10148; Gerar</a></li>
+                    </ul>
+
+                    <a href="Tela1-Login.html">
+                        <input class="botao" type="submit" value="Sair">
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <aside>
+            <article class="alinharCard">
+
+                <h3 style="text-align: center; font-size: 25px;">Gerar Questionário</h3>
+
+                <p>Escolha as perguntas que estarão presentes no questionátio que será criado.</p>
+
+                <form id="questionario" name ="nome do questionario" method = "post" action="resposta.php">
+
+                    <input type="checkbox" name="questao1"/> <label>Vacinas em dia</label>
+                    <br><br>
+                    <input type="checkbox" name="questao2"/><label>Exames preventivos em dia</label>
+                    <br><br>
+                    <input type="checkbox" name="questao3"/><label>Uso de medicação constante</label>
+                    <br><br>
+                    <input type="checkbox" name="questao4"/><label>Doenças Respiratórias</label>
+                    <br><br>        
+                    <input type="checkbox" name="questao5"/><label>Doenças Cardíacas</label>
+                    <br><br>
+                    <input type="checkbox" name="questao6"/><label>Outras doenças</label>    
+                    <br><br>
+                    <input type="checkbox" name="questao7"/><label>Gestantes</label>
+                    <br><br>                
+                    <input type="checkbox" name="questao8"/><label>Internados recentemente</label>
+                    <br><br>                
+                    <input type="checkbox" name="questao9"/><label>Acompanhamento em dia</label>
+                    <br><br>               
+                    <input type="checkbox" name="questao10"/><label>Acompanhamento de saúde mental</label>
+                    <br><br>                
+                    <input type="checkbox" name="questao11"/><label>Observações</label>
+                    <br><br> 
+
+                    <input class="botaoQuestionario" type="button" value="Confirmar" onclick="alert('Questionário criado com sucesso')">
+
+                </form>
+
+            </article>
+        </aside>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+form{
+    text-align: center;
+}
+
+input{
+    margin-top: 5px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    border-style: solid;
+}
+
+.botaoMorador{
+    margin: 0 15px;
+    background-color: rgb(41, 126, 238);
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-color: rgb(59, 92, 136);
+}
+
+.botaoMorador:hover{
+    background-color: rgb(16, 89, 184);
+}

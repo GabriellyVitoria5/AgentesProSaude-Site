@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    text-align: center;
+    background: rgb(41, 126, 238);
+    padding: 26px;
+}
+
+header h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.barra{
+    background-color: rgb(179, 179, 179);
+    padding: 15px;
+    margin-top: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    font-size: medium;
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+}
+
+.espaço{
+    padding: 0 20px;
+}
+
+section{
+    float: left;
+    width: 25%;
+}
+
+aside{
+    width: 75%;
+    float: right;
+    padding-left: 20px;
+}
+
+.alinharCard{
+    background-color: white;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#menu{
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu a{
+    text-decoration: none;
+    color: black;
+}
+
+#menu li{
+    border-bottom: 1px solid #ddd;
+    padding: 8px 16px;
+}
+
+#menu li :hover{
+    color: rgb(31, 42, 190);
+}
+
+.botao{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 30%;
+    background-color: rgb(41, 126, 238);
+    color: white;
+    padding: 0 25px;
+    border-color: rgb(70, 113, 168);
+    border-radius: 15px;
+}
+
+.botao:hover{
+    background-color: rgb(16, 89, 184);
+}
+
+body h3{
+    color: rgb(41, 126, 238);;
+}
