@@ -2,13 +2,13 @@
 
     include_once("conexaoBD.php");
 
-    $pesquisa = $_POST["pesquisa"];
+    $pesquisaMorador = $_POST["pesquisaMorador"];
 
     //comando sql
     $sql = "SELECT * FROM agentesprosaude.Morador 
-    WHERE nome_morador like '%$pesquisa%'
-    or telefone like '%$pesquisa%'
-    or cpf_morador like '%$pesquisa%'
+    WHERE nome_morador like '%$pesquisaMorador%'
+    or telefone like '%$pesquisaMorador%'
+    or cpf_morador like '%$pesquisaMorador%'
     order by nome_morador";
     
     //executar o comando
@@ -36,10 +36,6 @@
 
                 <?php
                 while ($exibir = $dadosMoradores->fetch_assoc()) {
-
-
-                    //$sqlDataNascimento ="SELECT data_nascimento FROM agentesprosaude.Morador";
-                    //$dataNascimento = date("d/m/Y", strtotime($conn->query($sqlDataNascimento)));
                 ?>
 
                     <tr>
@@ -70,5 +66,7 @@
         </div>
     <?php
     }
-
+    else {
+        echo "<h4>Nenhum registro retornado!</h4";
+    }
 ?>
