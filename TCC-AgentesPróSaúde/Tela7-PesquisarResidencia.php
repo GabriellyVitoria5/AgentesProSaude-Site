@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="estilosPaginaInicial.css">
     <link rel="stylesheet" href="estilosPesquisarResidencia.css">
 
+    <script>
+
+    $(document).ready(function() {
+                $("#form-pesquisaResidencia").submit(function(evento) {
+                    evento.preventDefault();
+                    let pesquisa = $("#pesquisaMorador").val();
+
+                    let dados = {
+                        pesquisa: pesquisa,
+                    }
+
+                    $.post("buscaMorador.php", dados, function(retorna) {
+                        $(".resultadosMorador").html(retorna);
+                    });
+                });
+            });
+
+    function confirmarExclusao(id, endereco, complemento, bairro) {
+        if (window.confirm("Deseja realmente excluir o registro da residência: \n" + id + " " + endereco + " " + complemento + " " + bairro)) {
+            window.location = "excluirResidencia.php?ID_residencia=" + id;
+        }
+    }
+
+</script>
+
 </head>
 
 <body>
@@ -65,6 +90,20 @@
         <aside>
             <article class="alinharCard">
 
+                <form id="form-pesquisaResidencia" action="" method="post">
+
+                    <img src="imgTCC//icone-search.png" id="btnBusca" alt="Buscar"/>
+                    <label for="pesquisa">Informe o campo a ser pesquisado</label>
+                    <br><br>
+                    <input type="text" name="pesquisaResidencia" id="pesquisaResidencia" placeholder="Buscar...">
+                    <input type="submit" name="enviarResidencia"  value="Pesquisar">
+
+                </form>
+
+                <div class="resultadosResidencia">
+
+                </div>
+                <!-- -->
                 <?php
 
                 //comando sql
@@ -96,7 +135,6 @@
                             <?php
                             while ($exibir = $dadosResidencia->fetch_assoc()) {
                             ?>
-
                                 <tr>
                                     <td><?php echo $exibir["endereco"] ?> </td>
                                     <td><?php echo $exibir["complemento"] ?> </td>
@@ -106,16 +144,16 @@
                                     ?>
                                     <td><a class="editarExcluir" href="Tela8-EditarResidencia.php?ID_residencia=<?php echo $exibir["ID_residencia"] ?>">Editar</a></td>
 
-                                        <td>
-                                            <a class="editarExcluir" href="#" onclick="confirmarExclusao(
-                                            '<?php echo $exibir["ID_residencia"] ?>',
-                                            '<?php echo $exibir["endereco"] ?>',
-                                            '<?php echo $exibir["complemento"] ?>',
-                                            '<?php echo $exibir["bairro"] ?>')">
-                                                Excluir
-                                            </a>
-                                        </td>
-
+                                    <td>
+                                        <a class="editarExcluir" href="#" onclick="confirmarExclusao(
+                                        '<?php echo $exibir["ID_residencia"] ?>',
+                                        '<?php echo $exibir["endereco"] ?>',
+                                        '<?php echo $exibir["complemento"] ?>',
+                                        '<?php echo $exibir["bairro"] ?>')">
+                                            Excluir
+                                        </a>
+                                    </td>
+                                    
                                 </tr>
 
                             <?php
@@ -126,11 +164,8 @@
                     </div>
                 <?php
                 }
-
                 ?>
-
-                <br><br>
-
+            <!-- -->
 
             </article>
         </aside>
@@ -138,15 +173,5 @@
     </div>
 
 </body>
-
-<script>
-
-    function confirmarExclusao(id, endereco, complemento, bairro) {
-        if (window.confirm("Deseja realmente excluir o registro da residência: \n" + id + " " + endereco + " " + complemento + " " + bairro)) {
-            window.location = "excluirResidencia.php?ID_residencia=" + id;
-        }
-    }
-
-</script>
 
 </html>
