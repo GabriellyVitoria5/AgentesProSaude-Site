@@ -15,16 +15,16 @@
     <script>
 
         $(document).ready(function() {
-            $("#form-pesquisa").submit(function(evento) {
+            $("#form-pesquisaMorador").submit(function(evento) {
                 evento.preventDefault();
-                let pesquisa = $("#pesquisa").val();
+                let pesquisa = $("#pesquisaMorador").val();
 
                 let dados = {
                     pesquisa: pesquisa,
                 }
 
                 $.post("buscaMorador.php", dados, function(retorna) {
-                    $(".resultados").html(retorna);
+                    $(".resultadosMorador").html(retorna);
                 });
             });
         });
@@ -91,16 +91,17 @@
         <aside>
             <article class="alinharCard">
 
-                <form id="form-pesquisa" action="" method="post">
+                <form id="form-pesquisaMorador" action="" method="post">
 
+                    <img src="imgTCC//icone-search.png" id="btnBusca" alt="Buscar"/>
                     <label for="pesquisa">Informe o campo a ser pesquisado</label>
                     <br><br>
-                    <input type="text" name="pesquisa" id="pesquisa">
-                    <input type="submit" name="Enviar" value="Pesquisar">
+                    <input type="text" name="pesquisaMorador" id="pesquisaMorador" placeholder="Buscar...">
+                    <input type="submit" name="enviarMorador"  value="Pesquisar">
 
                 </form>
 
-                <div class="resultados">
+                <div class="resultadosMorador">
 
                 </div>
 
