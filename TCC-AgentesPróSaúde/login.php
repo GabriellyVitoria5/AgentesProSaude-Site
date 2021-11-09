@@ -7,7 +7,9 @@
     session_start(); 
     //receber usuário e senha vindo do login
     $cpf = $conn->real_escape_string($_POST["txtCpf"]);
-    $senha = md5($_POST["txtSenha"]);
+
+    //$senha = md5($_POST["txtSenha"]);
+    $senha = $_POST["txtSenha"];
 
     $sql = "SELECT * 
             from Agente 
